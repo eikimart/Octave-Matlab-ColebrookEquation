@@ -1,0 +1,12 @@
+This script will iteratively solve the Colebrook equation for the
+Darcy friction factor. Read more about it here:
+http://en.wikipedia.org/wiki/Colebrook_equation
+
+'Re' is the Reynolds number, 'epsilon' is the roughness height in
+millimeters, a characteristic of the pipe material that you can
+probably look up in published tables, depending on your
+requirements. 'd' is the pipe diameter in millimeters.
+
+This is very crudely done; for instance, 10 iterations is simply
+assumed to yield precise-enough results. Modify as needed. Attribution
+not necessary. Your mileage may vary.
