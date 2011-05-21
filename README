@@ -2,10 +2,20 @@ This script will iteratively solve the Colebrook equation for the
 Darcy friction factor. Read more about it here:
 http://en.wikipedia.org/wiki/Colebrook_equation
 
+Call this script from the command line like this:
+./colebrook.m Re d epsilon
+
 'Re' is the Reynolds number, 'epsilon' is the roughness height in
 millimeters, a characteristic of the pipe material that you can
 probably look up in published tables, depending on your
 requirements. 'd' is the pipe diameter in millimeters.
+
+Try this:
+
+./colebrook.m 25300 25.4 0.002;
+
+This would represent a flow with Reynolds number 25300 in a 1-inch
+diameter smooth plastic pipe, for example.
 
 This is very crudely done; for instance, 10 iterations is simply
 assumed to yield precise-enough results. Modify as needed. Attribution

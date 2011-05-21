@@ -4,12 +4,20 @@
 % for pipe friction.  
 % Eiki Martinson, MSEE Thesis, July 2010
 
-clear; clc;
+% Call it like this: colebrook.m Re d epsilon, where
+% 'Re' is the Reynolds number, 'epsilon' is the roughness height in
+% millimeters, a characteristic of the pipe material that you can
+% probably look up in published tables, depending on your
+% requirements. 'd' is the pipe diameter in millimeters.
+
+clear;
+arg_list = argv ();
+Re = str2num(arg_list{1});
+d = str2num(arg_list{2});
+epsilon = str2num(arg_list{3});
+
 f_initial = 0.035; %Initial value guessed at by aiming at the
                    %middle of the Moody chart  
-Re = 25300;
-epsilon = 0.002;
-d = 25.4;          %Last two values both in millimeters
 
 r = epsilon / d;   %Roughness ratio
 f = f_initial;
